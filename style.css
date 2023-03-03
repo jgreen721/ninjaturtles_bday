@@ -85,7 +85,7 @@
   width: 325px;
   height: 1000px;
   width: 600px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   border-radius: 50%;
   position: relative;
   overflow: hidden;
