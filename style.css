@@ -45,6 +45,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   padding: 3rem 0;
+  overflow: hidden;
 }
 
 .content-overlay h1 {
