@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(/assets/turtles-font/Turtles-zOzL.ttf);
+}
+
+body {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* border: 5px solid red; */
+}
+
+.overlay-bg {
+  height: 100%;
+  width: 100%;
+  /* object-fit: cover; */
+}
+
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3rem 0;
+}
+
+.content-overlay h1 {
+  color: green;
+  text-shadow: 2px 2px 2px black, 2px 3px 35px black, 4px 13px 55px white;
+  font-family: myFirstFont;
+
+  opacity: 75%;
+}
+
+.large {
+  font-size: 8rem;
+}
+
+.smaller {
+  font-size: 4rem;
+}
+
+.red {
+  color: red;
+  font-family: myFirstFont;
+}
+
+.pizza-container {
+  height: 375px;
+  width: 325px;
+  height: 1000px;
+  width: 600px;
+  /* border: 2px solid green; */
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-75px);
+  /* border: 15px solid tan; */
+}
+
+.pizza-slice-wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  top: 0;
+  transform: rotate(var(--i));
+  transform-origin: center;
+  transition: 2s ease;
+  /* border: 25px solid brown; */
+}
+
+.pizza-slice {
+  height: 500px;
+  width: 500px;
+  /* border-top: 25px solid rgb(165, 108, 42); */
+
+  /* border: 2px solid red; */
+  position: relative;
+  overflow: hidden;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
+  clip-path: polygon(0 0, 49% 100%, 100% 0);
+  margin: 0 auto;
+}
+
+.pizza-img {
+  height: 200%;
+  width: 200%;
+  position: absolute;
+  top: -50%;
+  left: -25%;
+}
+
+.flyslice {
+  animation: var(--animate) 2s forwards;
+}
+
+@keyframes flyleft {
+  100% {
+    left: -600px;
+  }
+}
+
+@keyframes flyright {
+  100% {
+    left: 600px;
+  }
+}
+
+@keyframes flyup {
+  100% {
+    top: -600px;
+  }
+}
+
+@keyframes flydown {
+  100% {
+    top: 600px;
+  }
+}

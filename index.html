@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Happy Birthday</title>
+  </head>
+  <body>
+    <div class="bg-overlay">
+      <img class="overlay-bg" src="./assets/turtles.jpeg" alt="" />
+    </div>
+    <div class="content-overlay">
+      <h1 class="large">Happy <span class="red">5</span>th</h1>
+      <h1 class="smaller">Birthday</h1>
+      <h1 class="large">Louis!</h1>
+    </div>
+    <div class="pizza-container">
+      <div style="--i: 0deg; --animate: flyup" class="pizza-slice-wrapper">
+        <div class="pizza-slice">
+          <img class="pizza-img" src="assets/pizzaimg.png" alt="" />
+        </div>
+      </div>
+      <div style="--i: 45deg; --animate: flyup" class="pizza-slice-wrapper">
+        <div class="pizza-slice">
+          <img class="pizza-img" src="assets/pizzaimg.png" alt="" />
+        </div>
+      </div>
+      <div style="--i: 90deg; --animate: flyright" class="pizza-slice-wrapper">
+        <div class="pizza-slice">
+          <img class="pizza-img" src="assets/pizzaimg.png" alt="" />
+        </div>
+      </div>
+      <div style="--i: 135deg; --animate: flyright" class="pizza-slice-wrapper">
+        <div class="pizza-slice">
+          <img class="pizza-img" src="assets/pizzaimg.png" alt="" />
+        </div>
+      </div>
+      <div style="--i: 180deg; --animate: flyright" class="pizza-slice-wrapper">
+        <div class="pizza-slice">
+          <img class="pizza-img" src="assets/pizzaimg.png" alt="" />
+        </div>
+      </div>
+      <div style="--i: 225deg; --animate: flydown" class="pizza-slice-wrapper">
+        <div class="pizza-slice">
+          <img class="pizza-img" src="assets/pizzaimg.png" alt="" />
+        </div>
+      </div>
+      <div style="--i: 270deg; --animate: flydown" class="pizza-slice-wrapper">
+        <div class="pizza-slice">
+          <img class="pizza-img" src="assets/pizzaimg.png" alt="" />
+        </div>
+      </div>
+      <div style="--i: 315deg; --animate: flyleft" class="pizza-slice-wrapper">
+        <div class="pizza-slice">
+          <img class="pizza-img" src="assets/pizzaimg.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var pizzaSlices = document.querySelectorAll(".pizza-slice-wrapper");
+      setTimeout(() => {
+        console.log("start fx!");
+        for (let i = 0; i < pizzaSlices.length; i++) {
+          setTimeout(() => {
+            pizzaSlices[i].classList.add("flyslice");
+          }, i * 1250);
+        }
+      }, 3500);
+    </script>
+  </body>
+</html>
