@@ -12,14 +12,15 @@
   src: url(/assets/turtles-font/Turtles-zOzL.ttf);
 }
 
-body {
+.app {
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
@@ -59,11 +60,11 @@ body {
 }
 
 .large {
-  font-size: 8rem;
+  font-size: 6rem;
 }
 
 .smaller {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .red {
@@ -71,16 +72,24 @@ body {
   font-family: "Righteous", cursive;
 }
 
+.pizza-overlay-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .pizza-container {
   height: 375px;
   width: 325px;
   height: 1000px;
   width: 600px;
-  /* border: 2px solid green; */
+  border: 2px solid green;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
-  transform: translateY(-75px);
+  transform: translateY(-75px) translateX(-75px);
   /* border: 15px solid tan; */
 }
 
